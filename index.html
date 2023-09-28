@@ -1,24 +1,50 @@
+<!DOCTYPE html>
 <html>
-<title> pagina de manuelim </title>
-<body> 
-<p><center><font color ="2271B3"> Hola mundo </font></p>
-<p> <h3><font color = "7FF233">CEMENTERIO CLUB </font></h3></center></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fIeVgSvqFyY?si=rpORmoAZlAFcnuaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-<p> Justo que pensaba</p>
-<p> En vos, nena</p>
-<p> Caí muerto</p>
-<p> Le di al pequeño dios</p>
-<p> Del centro gris</p>
-<p> Del abismo</p>
-<p> Solo sé que no soy yo</p>
-<p> A quien duerme</p>
-<p> Quizás, no sea yo quien duerme</p>
-<p> ¿Qué le dio al pequeño dios del centro gris?</p>
-<p> Que ahora ves algo en mí que no detestes</p>
-<p>Y solo y triste voy a estar</p>
-<p> En este cementerio</p>
-<p> El calor ahora, sin vos, en verano</p>
-<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2FTintadigitalx%2Fposts%2Fpfbid0JqfWeuxo4TGNeQghcmuZmaHVd6symXTd8KvD2MiqGPnswHJESbiMfLTVAT46VMJ8l&show_text=true&width=500" width="500" height="732" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-<p> <h1>TODOS LOS DERECHOS RESERVADOS </h1></p>
-</body> 
+<head>
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora Simple</h1>
+    <form id="calculator">
+        <input type="text" id="display" readonly>
+        <br>
+        <button type="button" onclick="addToDisplay('1')">1</button>
+        <button type="button" onclick="addToDisplay('2')">2</button>
+        <button type="button" onclick="addToDisplay('3')">3</button>
+        <button type="button" onclick="addToDisplay('+')">+</button>
+        <br>
+        <button type="button" onclick="addToDisplay('4')">4</button>
+        <button type="button" onclick="addToDisplay('5')">5</button>
+        <button type="button" onclick="addToDisplay('6')">6</button>
+        <button type="button" onclick="addToDisplay('-')">-</button>
+        <br>
+        <button type="button" onclick="addToDisplay('7')">7</button>
+        <button type="button" onclick="addToDisplay('8')">8</button>
+        <button type="button" onclick="addToDisplay('9')">9</button>
+        <button type="button" onclick="addToDisplay('*')">*</button>
+        <br>
+        <button type="button" onclick="addToDisplay('0')">0</button>
+        <button type="button" onclick="clearDisplay()">C</button>
+        <button type="button" onclick="calculate()">=</button>
+        <button type="button" onclick="addToDisplay('/')">/</button>
+    </form>
+
+    <script>
+        function addToDisplay(value) {
+            document.getElementById('display').value += value;
+        }
+
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        function calculate() {
+            try {
+                document.getElementById('display').value = eval(document.getElementById('display').value);
+            } catch (error) {
+                document.getElementById('display').value = 'Error';
+            }
+        }
+    </script>
+</body>
 </html>
